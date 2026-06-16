@@ -19,7 +19,7 @@ Cardio-IA-4/
 │
 ├── notebooks/
 │   ├── PreProcessamento.ipynb            # Pipeline de Pré-processamento (Parte 1)
-│   └── parte2.ipynb                      # Treinamento e Transfer Learning (Parte 2)
+│   └── cnn.ipynb                      # Treinamento e Transfer Learning (Parte 2)
 │
 ├── docs/
 │   └── CardioIA-4_Relatorio_Pre_Processamento.pdf   # Justificativas técnicas e arquitetura
