@@ -22,7 +22,7 @@ Cardio-IA-4/
 │   └── parte2.ipynb                      # Treinamento e Transfer Learning (Parte 2)
 │
 ├── docs/
-│   └── Relatorio_Pre_Processamento.pdf   # Justificativas técnicas e arquitetura
+│   └── CardioIA-4_Relatorio_Pre_Processamento.pdf   # Justificativas técnicas e arquitetura
 │
 └── README.md                             # Documentação principal do projeto
 ```
