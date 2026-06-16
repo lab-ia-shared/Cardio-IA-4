@@ -18,8 +18,8 @@ A organização do repositório reflete as etapas do pipeline de Deep Learning:
 Cardio-IA-4/
 │
 ├── notebooks/
-│   ├── 01_engenharia_de_dados_cv.ipynb   # Pipeline de Pré-processamento (Parte 1)
-│   └── 02_classificacao_cnn.ipynb        # Treinamento e Transfer Learning (Parte 2)
+│   ├── PreProcessamento.ipynb            # Pipeline de Pré-processamento (Parte 1)
+│   └── parte2.ipynb                      # Treinamento e Transfer Learning (Parte 2)
 │
 ├── docs/
 │   └── Relatorio_Pre_Processamento.pdf   # Justificativas técnicas e arquitetura
