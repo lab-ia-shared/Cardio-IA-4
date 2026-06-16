@@ -58,7 +58,32 @@ Validação: 887 imagens (20% da base de desenvolvimento) para monitoramento de 
 
 Teste: 1.114 imagens reservadas e isoladas para avaliação final de acurácia, precisão e F1-Score (Parte 2).
 
-## 🛡️ Governança e Ética (Pensamento Crítico sobre Vieses na Visão Computacional)
+## 🧠 4. Modelagem de Deep Learning (CNN e Transfer Learning)
+Para a classificação das imagens radiográficas, desenvolvemos e comparamos duas abordagens de Redes Neurais Convolucionais utilizando o framework Keras/TensorFlow:
+
+Modelo 1: CNN Customizada (Treinada do Zero): Arquitetura sequencial simples construída com três blocos de extração de características (camadas Conv2D + MaxPooling2D). Na camada densa final, aplicamos Dropout (0.5) para mitigação de overfitting e ativação Sigmoid para a saída binária.
+
+Modelo 2: Transfer Learning (VGG16): Para elevar a robustez do sistema, acoplamos a arquitetura consagrada VGG16 (pré-treinada no gigantesco dataset ImageNet). As camadas convolucionais base foram congeladas para atuar como extratoras de características avançadas, enquanto uma nova rede Densa superior foi acoplada e treinada especificamente para identificar as assinaturas visuais da Cardiomegalia.
+
+## 📊 5. Avaliação de Desempenho Clínico
+O modelo foi submetido ao conjunto de Teste inédito (1.114 exames intocados), gerando resultados rigorosos suportados pela biblioteca Scikit-Learn e Seaborn:
+
+Matriz de Confusão: Monitoramento minucioso de Falsos Positivos e Falsos Negativos, cruciais em contextos hospitalares para evitar encaminhamentos equivocados ou negligência.
+
+Métricas de Classificação: Extração dos índices finais de Acurácia global, Precision, Recall (Sensibilidade) e F1-Score, evidenciando a assertividade da Inteligência Artificial em detectar a patologia cardíaca com equilíbrio estatístico.
+
+## 🖥️ 6. Protótipo Interativo: O Assistente Virtual
+Como prova de conceito da utilidade clínica do algoritmo, desenvolvemos um Assistente Cardiológico Virtual diretamente dentro do Google Colab (através da biblioteca ipywidgets).
+
+A aplicação funcional apresenta a seguinte dinâmica:
+
+Interação Real: O médico pode realizar o upload de uma radiografia externa salva em seu computador.
+
+Processamento Assíncrono: A imagem submetida passa pelo mesmo pipeline invisível estabelecido na etapa 1 (redimensionamento e normalização tensorizada).
+
+Diagnóstico Imediato: O modelo prediz a condição e emite um painel visual contendo o laudo simulado de saúde ("Coração Normal" vs "ALERTA DE CARDIOMEGALIA DETECTADA"), exibindo simultaneamente a porcentagem exata de confiança algorítmica.
+
+🛡️ Governança e Ética (Pensamento Crítico sobre Vieses na Visão Computacional)
 Acreditamos que a automação na saúde exige responsabilidade. O desenvolvimento deste módulo considerou as seguintes diretrizes éticas:
 
 Viés de Representatividade: Datasets de imagens médicas (como o NIH) podem conter desbalanceamentos de atributos demográficos ocultos (gênero, etnia e idade). Reconhecemos que o modelo pode apresentar acurácias distintas dependendo do perfil do paciente, exigindo testes rigorosos de Fairness no futuro.
